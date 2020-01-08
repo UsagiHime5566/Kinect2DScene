@@ -498,7 +498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &697816678
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -649,7 +649,6 @@ GameObject:
   - component: {fileID: 904279418}
   - component: {fileID: 904279417}
   - component: {fileID: 904279416}
-  - component: {fileID: 904279415}
   m_Layer: 0
   m_Name: Main Camera2
   m_TagString: MainCamera
@@ -657,14 +656,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &904279415
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904279414}
-  m_Enabled: 1
 --- !u!124 &904279416
 Behaviour:
   m_ObjectHideFlags: 0
@@ -741,7 +732,6 @@ GameObject:
   - component: {fileID: 996161014}
   - component: {fileID: 996161013}
   - component: {fileID: 996161012}
-  - component: {fileID: 996161016}
   m_Layer: 0
   m_Name: ScrollBackground
   m_TagString: Untagged
@@ -780,7 +770,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c885f516ab53c054590d6ea3da872931, type: 2}
+  - {fileID: 2100000, guid: e0a946df74a1464489527889eaff77e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -816,25 +806,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996161011}
   m_LocalRotation: {x: -0.0000020191073, y: 0.7071068, z: -0.7071068, w: 0.0000020191073}
-  m_LocalPosition: {x: 0, y: 0.3, z: 0}
-  m_LocalScale: {x: 0.285, y: 0.06964955, z: 0.080376945}
+  m_LocalPosition: {x: 0, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.285, y: 1, z: 0.080376945}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: -270, y: 0, z: 179.99998}
---- !u!114 &996161016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996161011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc15d4f57a87c8c4dad9844f124bc6c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrollSpeed: 0.01
 --- !u!1001 &1449078975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1030,6 +1007,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1733826476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1733826478}
+  - component: {fileID: 1733826477}
+  m_Layer: 0
+  m_Name: FlowParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1733826477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733826476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96599d8be5268d4fa97fecaf268e952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  createPeriod: 10
+  randomTime: 20
+  flowPrefab: {fileID: 5485829894026500034, guid: d80f1b4cb8110a24a9f2c7d4ced21935,
+    type: 3}
+  ballPrefab: {fileID: 5977562792013949076, guid: 11332c8950bf50640b7b8191e96146db,
+    type: 3}
+  barPrefab: {fileID: 4146837864391752563, guid: 1e1c73cfb464d47499a3a84394efcb04,
+    type: 3}
+--- !u!4 &1733826478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733826476}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1878426719
 GameObject:
@@ -1295,7 +1323,6 @@ GameObject:
   - component: {fileID: 2132550433}
   - component: {fileID: 2132550432}
   - component: {fileID: 2132550430}
-  - component: {fileID: 2132550429}
   m_Layer: 0
   m_Name: Main Camera1
   m_TagString: MainCamera
@@ -1303,14 +1330,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &2132550429
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2132550428}
-  m_Enabled: 1
 --- !u!124 &2132550430
 Behaviour:
   m_ObjectHideFlags: 0
