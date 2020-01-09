@@ -36,6 +36,9 @@ public class AvatarController : MonoBehaviour
 	[Tooltip("Whether the finger orientations are allowed or not.")]
 	public bool fingerOrientations = false;
 	
+	[Tooltip("Sora. add , x move rate between screen.")]
+	public float x_Scale = 0.4f;
+
 	[Tooltip("Rate at which the avatar will move through the scene.")]
 	public float moveRate = 1f;
 	
@@ -1001,6 +1004,7 @@ public class AvatarController : MonoBehaviour
 	
 		// transition to the new position
 		Vector3 targetPos = bodyRootPosition + Kinect2AvatarPos(trans, verticalMovement);
+		targetPos = new Vector3(targetPos.x * x_Scale, targetPos.y, targetPos.z);
 
 		if(isRigidBody && !verticalMovement)
 		{
