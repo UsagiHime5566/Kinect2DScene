@@ -14,7 +14,7 @@ public class BallFlow : MonoBehaviour
 
     void Start()
     {
-        transform.position = new Vector3(posToCreate, Random.Range(posHeightMin, posHeightMax), 0);
+        transform.position = new Vector3(posToCreate, Random.Range(posHeightMin, posHeightMax), 0.5f);
         transform.DOLocalMoveY(Random.Range(-0.1f, 0.1f), 2.07f).SetLoops(-1, LoopType.Yoyo);
     }
 

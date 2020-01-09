@@ -14,7 +14,7 @@ public class Cloudflow : MonoBehaviour
 
     void Start()
     {
-        transform.position = new Vector3(posToCreate, Random.Range(posHeightMin, posHeightMax), 0);
+        transform.position = new Vector3(posToCreate, Random.Range(posHeightMin, posHeightMax), 0.5f);
         transform.DOLocalRotate(new Vector3(0, 0, 10), 0.87f).SetLoops(-1, LoopType.Yoyo);
         transform.DOLocalMoveY(Random.Range(-0.1f, 0.1f), 2.07f).SetLoops(-1, LoopType.Yoyo);
     }
